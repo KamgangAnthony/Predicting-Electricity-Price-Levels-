@@ -3,7 +3,7 @@ Making a forecast of electricity price levels in Australia
 
 * Created a model that can predict electricity prices for the next day in Australia, given prices for the past 7 days 
 * For a company that generates electricity(through solar panels for example), they can store when prices are low and sell when they are high
-* The model is 64% accurate(Pretty high given that prices are even affected by political reasons for example!)
+* The model is 64% accurate(Pretty high given that prices are even affected by political reasons for example!):(MAPE ~36%)
 * Analysed and reported how the price varies per season and which factors affect it.
 * Analysed the profitability of storing electrical power in a 70MWh battery system and resell them when prices go high
 * Optimized Linear, Random Forest, Gradient boosting regressor models using two ensembling methods(bagging and stacking) to reach the best model.
@@ -48,7 +48,7 @@ After getting the data, I needed to clean it up so that it was usable for our mo
 
 
 ## EDA
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
+I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
 
 ![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
 ![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
