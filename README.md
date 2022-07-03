@@ -63,23 +63,28 @@ I looked at the distributions of the data and the value counts for the various c
 
 ## Model Building 
 
-First, I transformed the categorical variables into dummy variables. I also split the data into train and tests sets with a test size of 20%.   
+First, I transformed the categorical variables into boolean variables. I also split the data into train and tests sets and in folds for cross validation
+making sure each fold during fit does not use future values.
 
-I tried three different models and evaluated them using Mean Absolute Error. I chose MAE because it is relatively easy to interpret and outliers aren’t particularly bad in for this type of model.   
+I tried five different models and based on their results, I tried to ensemble methods. Finally the stacking ensemble gave the lowest MAPE. I chose MAPE because it is a good KPI to measure forecast accuracy.  
 
-I tried three different models:
-*	**Multiple Linear Regression** – Baseline for the model
-*	**Lasso Regression** – Because of the sparse data from the many categorical variables, I thought a normalized regression like lasso would be effective.
-*	**Random Forest** – Again, with the sparsity associated with the data, I thought that this would be a good fit. 
+These are five models + two ensembles I tried:
+*	**linear Regression**
+*	**linear gradient boosting model** 
+*	**gradient boosting model** 
+*	**bagging regressor model** 
+*	**random forest regressor** 
+*	**ensemble voting regressor model** 
+*	**ensemble stacked regressor model** – Combined Bagging and gradient boosting regressor to linear regression model.(Yields the best-smallest MAPE)
 
 ## Model performance
-The Random Forest model far outperformed the other approaches on the test and validation sets. 
-*	**Random Forest** : MAE = 11.22
-*	**Linear Regression**: MAE = 18.86
-*	**Ridge Regression**: MAE = 19.67
+The ensemble stacked regressor model outperformed the other approaches on the test and validation sets.
+*	**ensemble stacked regressor model** : MAPE = 36.1%
+*	**ensemble voting regressor model**: MAPE = 38.2%
+*	**linear gradient boosting model**: MAPE = 39.4%
+*	The other models performed worst than those three.
 
 ## Productionization 
-In this step, I built a flask API endpoint that was hosted on a local webserver by following along with the TDS tutorial in the reference section above. The API endpoint takes in a request with a list of values from a job listing and returns an estimated salary. 
-
+Now with information from the past 7 days a company can predict the next day's electricity price, buy today and sell tomorrow if tomorrow's price is greater for example. API coming in the future.
 
 
