@@ -48,7 +48,7 @@ After getting the data, I needed to clean it up so that it was usable for our mo
 
 
 ## EDA
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+I looked at the manner in which price and demand vary. Below are a few highlights from the data.
 * Demand per year
 ![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160233.png "Demand per year")
 
