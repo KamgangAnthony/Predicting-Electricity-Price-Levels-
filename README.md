@@ -49,10 +49,17 @@ After getting the data, I needed to clean it up so that it was usable for our mo
 
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables.
+* Demand per year
+![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160233.png "Demand per year")
 
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/salary_by_job_title.PNG "Salary by Position")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/positions_by_state.png "Job Opportunities by State")
-![alt text](https://github.com/PlayingNumbers/ds_salary_proj/blob/master/correlation_visual.png "Correlations")
+* Price per year
+![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20161956.png "Price per year")
+
+* Price per month
+![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160528.png "Price per month")
+
+* Correlation between price and demand
+![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160928.png "Correlation between price and demand")
 
 ## Model Building 
 
