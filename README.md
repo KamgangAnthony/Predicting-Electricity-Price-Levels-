@@ -1,11 +1,13 @@
 # Predicting Electricity Price Levels: Project Overview 
 Making a forecast of electricity price levels in Australia
 
-* Created a model that can predict electricity prices for the next day, given prices for the past 7 days
+* Created a model that can predict electricity prices for the next day in Australia, given prices for the past 7 days 
+* For a company that generates electricity(through solar panels for example), they can store when prices are low and sell when they are high
 * The model is 64% accurate(Pretty high given that prices are even affected by political reasons for example!)
 * Analysed and reported how the price varies per season and which factors affect it.
 * Analysed the profitability of storing electrical power in a 70MWh battery system and resell them when prices go high
 * Optimized Linear, Random Forest, Gradient boosting regressor models using two ensembling methods(bagging and stacking) to reach the best model.
+* The model predicts the price. Will maybe create an API using flask for this project in the future.
 
 
 
@@ -32,23 +34,18 @@ Making a forecast of electricity price levels in Australia
 * "holiday" - "Y" if the day was a state or national holiday, "N" otherwise. 
 
 ## Data Cleaning
-After scraping the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
+After getting the data, I needed to clean it up so that it was usable for our model. I made the following changes and created the following variables:
 
-*	Parsed numeric data out of salary 
-*	Made columns for employer provided salary and hourly wages 
-*	Removed rows without salary 
-*	Parsed rating out of company text 
-*	Made a new column for company state 
-*	Added a column for if the job was at the company’s headquarters 
-*	Transformed founded date into age of company 
-*	Made columns for if different skills were listed in the job description:
-    * Python  
-    * R  
-    * Excel  
-    * AWS  
-    * Spark 
-*	Column for simplified job title and Seniority 
-*	Column for description length 
+*	Renamed RRP to price
+*	Made columns for year, month, day and week from the date
+*	Converted solar exposure from MJ/m^2 to MWh/m^2
+*	Get prices for the 7 previous days and store them as new columns(price_1 -> price_7)
+*	Added a new column(median_price) that has the median price of electricity for the past 7 days for each date in data.
+*	Added a new column(historical_median) that has the median historical price by week for each date using only data that is before the date
+*	Added a new column(historical_demand) that has the median historical demand by week for each date using only data that is before the date
+*	Added 3 columns for tomorrow's price, fill batteries or not, the profit.
+
+
 
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
