@@ -50,16 +50,17 @@ After getting the data, I needed to clean it up so that it was usable for our mo
 ## EDA
 I looked at the manner in which price and demand vary. Below are a few highlights from the data.
 * Demand per year
-![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160233.png "Demand per year")
+<img src="https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160233.png" alt="Logo" width=600 height=300>
 
 * Price per year
-![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20161956.png "Price per year")
+<img src="https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20161956.png" alt="Logo" width=600 height=300>
 
 * Price per month
-![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160528.png "Price per month")
+<img src="https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160528.png" alt="Logo" width=600 height=300>
 
 * Correlation between price and demand
-![alt text](https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160928.png "Correlation between price and demand")
+<img src="https://github.com/KamgangAnthony/Predicting-Electricity-Price-Levels-/blob/main/photos/Screenshot%202022-07-03%20160928.png" alt="Logo" width=600 height=300>
+
 
 ## Model Building 
 
